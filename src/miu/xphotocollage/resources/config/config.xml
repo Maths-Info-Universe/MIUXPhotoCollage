@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <software>
+        <soft-version>1.0 SR1</soft-version>
+        <soft-name>MIUniverse eXtensible Photo Collage</soft-name>
+        <soft-shortname>MIUXPhotoCollage</soft-shortname>
+        <soft-instance>FullApp</soft-instance>
+        <soft-copyright>Copyright (C) MIUniverse eXtensible Photo Collage (MIUXPhotoCollage) MIUniverse 2018</soft-copyright>
+        <soft-devcompany>Maths-Info Universe (MIUniverse)</soft-devcompany>
+        <soft-devname>ZEKENG NDADJI Milliam Maxime;JAGHO MDEMAYA Garrik Brel;ZILE CHONGANG Virginie;TAGUEZEM Boris;ALONTSI Grâce Divine;ZEMTSOP NDADJI Brice Arléon;SANWOUO CHEKAM Brell</soft-devname>
+        <soft-devmail>ndadjimaxime@yahoo.fr</soft-devmail>
+        <soft-devphone>(+237) 674 96 53 70 / 697 32 91 08</soft-devphone>
+        <soft-devwebsite>www.ndadjimaxime.wordpress.com</soft-devwebsite>
+        <soft-devcompanywebsite>www.miuplatform.com</soft-devcompanywebsite>
+        <soft-devcompanyfacebook>www.facebook.com/OMIUNIVERSE</soft-devcompanyfacebook>
+        <soft-helponline>http://www.miuplatform.com/miulivechat/help</soft-helponline>
+    </software>
+    <languages>
+        <lang-installed>
+            <lang>
+                <lang-name>Français</lang-name>
+                <lang-tag>fr_FR</lang-tag>
+            </lang>
+            <lang>
+                <lang-name>English (UK)</lang-name>
+                <lang-tag>en_GB</lang-tag>
+            </lang>
+        </lang-installed>
+        <lang-default>English (UK)~en_GB</lang-default>
+    </languages>
+    <window>
+        <window-width>1382</window-width>
+        <window-height>744</window-height>
+    </window>
+    <theme>
+        <default-theme>green</default-theme>
+        <theme-loadingask>Deactivated</theme-loadingask>
+    </theme>
+    <sound>
+        <sound-activated>Activated</sound-activated>
+    </sound>
+</config>
