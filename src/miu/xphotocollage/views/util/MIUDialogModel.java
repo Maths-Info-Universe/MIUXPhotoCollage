@@ -69,7 +69,7 @@ public abstract class MIUDialogModel extends JDialog{
     public MIUDialogModel (int commandType, MIUConfigManager config, Frame owner, String title, boolean modal, boolean showNextPrevKeys){
         super(owner, title, modal);
         this.setAlwaysOnTop(false);
-        ImageIcon icon = new ImageIcon(getClass().getResource("/miu/xphotocollage/resources/images/logo.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/miu/litesm/manager/resources/images/logo.png"));
         this.setIconImage(icon.getImage());
         this.commandType = commandType;
         this.showNextPrevKeys = showNextPrevKeys;
@@ -85,7 +85,7 @@ public abstract class MIUDialogModel extends JDialog{
     public MIUDialogModel (int commandType, MIUConfigManager config, Frame owner, String title, boolean modal, boolean showNextPrevKeys, boolean focusOnAction){
         super(owner, title, modal);
         this.setAlwaysOnTop(false);
-        ImageIcon icon = new ImageIcon(getClass().getResource("/miu/xphotocollage/resources/images/logo.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/miu/litesm/manager/resources/images/logo.png"));
         this.setIconImage(icon.getImage());
         this.commandType = commandType;
         this.showNextPrevKeys = showNextPrevKeys;
@@ -102,7 +102,7 @@ public abstract class MIUDialogModel extends JDialog{
     public MIUDialogModel (int commandType, MIUConfigManager config, Dialog owner, String title, boolean modal, boolean showNextPrevKeys){
         super(owner, title, modal);
         this.setAlwaysOnTop(true);
-        ImageIcon icon = new ImageIcon(getClass().getResource("/miu/xphotocollage/resources/images/logo.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/miu/litesm/manager/resources/images/logo.png"));
         this.setIconImage(icon.getImage());
         this.commandType = commandType;
         this.showNextPrevKeys = showNextPrevKeys;
@@ -118,7 +118,7 @@ public abstract class MIUDialogModel extends JDialog{
     public MIUDialogModel (int commandType, MIUConfigManager config, Dialog owner, String title, boolean modal, boolean showNextPrevKeys, boolean focusOnAction){
         super(owner, title, modal);
         this.setAlwaysOnTop(true);
-        ImageIcon icon = new ImageIcon(getClass().getResource("/miu/xphotocollage/resources/images/logo.png"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/miu/litesm/manager/resources/images/logo.png"));
         this.setIconImage(icon.getImage());
         this.commandType = commandType;
         this.showNextPrevKeys = showNextPrevKeys;
@@ -244,12 +244,13 @@ public abstract class MIUDialogModel extends JDialog{
                         return;
                     }
                     if((e.getSource() instanceof JTextField) || (e.getSource() instanceof JPasswordField)){
-                        if(showNextPrevKeys && nextButton.isEnabled()){
-                            nextButton.doClick();
+                        if(okButton.isEnabled()){
+                            okButton.doClick();
                             return;
                         }
-                        if(okButton.isEnabled())
-                            okButton.doClick();
+                        if(showNextPrevKeys && nextButton.isEnabled()){
+                            nextButton.doClick();
+                        }
                     }
                 }
             }
