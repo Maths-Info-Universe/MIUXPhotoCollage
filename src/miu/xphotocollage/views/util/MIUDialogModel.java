@@ -30,8 +30,8 @@ import java.awt.event.MouseListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JButton;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import javax.swing.JEditorPane;
+import javax.swing.JTextPane;
 import miu.xphotocollage.util.MIUConfigManager;
 import miu.xphotocollage.util.MIUTheme;
 import miu.xphotocollage.util.exception.MIUApplException;
@@ -233,7 +233,7 @@ public abstract class MIUDialogModel extends JDialog{
             @Override
             public void keyReleased(KeyEvent e) {
                 if(e.getKeyCode() == 10){
-                    if((e.getSource() instanceof JButton)){
+                    /*if((e.getSource() instanceof JButton)){
                         if(((JButton)e.getSource()).isEnabled())
                             ((JButton)e.getSource()).doClick();
                         return;
@@ -242,8 +242,9 @@ public abstract class MIUDialogModel extends JDialog{
                         if(((MIUButton)e.getSource()).isEnabled())
                             ((MIUButton)e.getSource()).doClick();
                         return;
-                    }
-                    if((e.getSource() instanceof JTextField) || (e.getSource() instanceof JPasswordField)){
+                    }*/
+                    if(!(e.getSource() instanceof JEditorPane || e.getSource() instanceof JTextPane
+                            || e.getSource() instanceof JButton || e.getSource() instanceof MIUButton)){
                         if(okButton.isEnabled()){
                             okButton.doClick();
                             return;

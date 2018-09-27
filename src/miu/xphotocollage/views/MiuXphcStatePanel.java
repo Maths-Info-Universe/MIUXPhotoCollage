@@ -128,17 +128,17 @@ public class MiuXphcStatePanel extends MIUPanelModel{
         add(toolBar);
     }
     
-    public void addTask(String t){
+    public synchronized void addTask(String t){
         tasks.add(0, t);
         updateTasks();
     }
     
-    public void removeTask(String t){
+    public synchronized void removeTask(String t){
         tasks.remove(t);
         updateTasks();
     }
     
-    public void updateTasks(){
+    public synchronized void updateTasks(){
         int size = tasks.size();
         if(size > 0){
             task.setText(tasks.get(0)+(size > 1 ? " (+"+ (size - 1) + " " + config.getLangValue("more") + ")" : ""));
